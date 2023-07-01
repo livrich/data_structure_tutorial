@@ -41,46 +41,46 @@ def Pop(stack):
    
 # Function to implement legal
 # movement between two poles
-def moveDisksBetweenTwoPoles(src, dest, s, d):
+def moveDisksBetweenTwoPoles(src, dest, x, y):
     pole1TopDisk = Pop(src)
     pole2TopDisk = Pop(dest)
  
     # When pole 1 is empty
     if (pole1TopDisk == -sys.maxsize):
         push(src, pole2TopDisk)
-        moveDisk(d, s, pole2TopDisk)
+        moveDisk(y, x, pole2TopDisk)
        
     # When pole2 pole is empty
     elif (pole2TopDisk == -sys.maxsize):
         push(dest, pole1TopDisk)
-        moveDisk(s, d, pole1TopDisk)
+        moveDisk(x, y, pole1TopDisk)
        
     # When top disk of pole1 > top disk of pole2
     elif (pole1TopDisk > pole2TopDisk):
         push(src, pole1TopDisk)
         push(src, pole2TopDisk)
-        moveDisk(d, s, pole2TopDisk)
+        moveDisk(y, x, pole2TopDisk)
        
     # When top disk of pole1 < top disk of pole2
     else:
         push(dest, pole2TopDisk)
         push(dest, pole1TopDisk)
-        moveDisk(s, d, pole1TopDisk)
+        moveDisk(x, y, pole1TopDisk)
    
 # Function to show the movement of disks
 def moveDisk(fromPeg, toPeg, disk):
-    print("Move the disk", disk, "from '", fromPeg, "' to '", toPeg, "'")
+    print("Move disk", disk, "from '", fromPeg, "' to '", toPeg, "'")
    
 # Function to implement TOH puzzle
 def tohIterative(num_of_disks, src, aux, dest):
-    s, d, a = 'S', 'D', 'A'
+    x, y, z = 'X', 'Y', 'Z'
    
     # If number of disks is even, then interchange
     # destination pole and auxiliary pole
     if (num_of_disks % 2 == 0):
-        temp = d
-        d = a
-        a = temp
+        temp = y
+        y = z
+        z = temp
     total_num_of_moves = int(pow(2, num_of_disks) - 1)
    
     # Larger disks will be pushed first
@@ -89,13 +89,13 @@ def tohIterative(num_of_disks, src, aux, dest):
    
     for i in range(1, total_num_of_moves + 1):
         if (i % 3 == 1):
-            moveDisksBetweenTwoPoles(src, dest, s, d)
+            moveDisksBetweenTwoPoles(src, dest, x, y)
    
         elif (i % 3 == 2):
-            moveDisksBetweenTwoPoles(src, aux, s, a)
+            moveDisksBetweenTwoPoles(src, aux, x, z)
    
         elif (i % 3 == 0):
-            moveDisksBetweenTwoPoles(aux, dest, a, d)
+            moveDisksBetweenTwoPoles(aux, dest, z, y)
  
 # Input: number of disks
 num_of_disks = 3
