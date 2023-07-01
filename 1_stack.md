@@ -14,7 +14,7 @@ If you decide to reread a book, and take it off the finished pile, this is calle
 
 Notice that push and pop operations happen from the back of the stack. Normally, removing from the middle of the stack is not allowed.
 
-The book at the **front** is the very first book read. A LIFO structure can result in data not being used for a long time. This might not be the ideal structure for all senarios but the real benefit of the stack is the ability to remember "what books we have read" or where we have been.
+The book at the **front** is the very first book read. A LIFO structure can result in data not being used for a long time. This might not be the ideal structure for all scenarios but the real benefit of the stack is the ability to remember "what books we have read" or where we have been.
 
 ![real examples](stack_real_life.png)
 
@@ -22,24 +22,24 @@ The book at the **front** is the very first book read. A LIFO structure can resu
 
 ## Some Uses in Software
 ### Undo and History
-One of the most common implimentations of a stack, is the undo feature. If we typed the names of some fruit those names would be added to a stack. We could then used undo to pop the last fruit from the stack.  
+One of the most common implementations of a stack, is the undo feature. If we typed the names of some fruit those names would be added to a stack. We could then used undo to pop the last fruit from the stack.  
 
 ![fruit stack](stack_fruit.webp)
 
-This is possible becasue the stack maintains a history of what was typed. Thus, pressing undo garantees that the last element added to the stack will be the one removed.
+This is possible because the stack maintains a history of what was typed. Thus, pressing undo guarantees that the last element added to the stack will be the one removed.
 
-Stacks are useful when we need to maintian history and perform an operation (like undo) backwards.
+Stacks are useful when we need to maintain history and perform an operation (like undo) backwards.
 
 </br>
 
 ### Function Calls
-When a funciton is called, the computer needs to know two basic things:
+When a function is called, the computer needs to know two basic things:
 * The function being called
 * What function to return to once finished
 
-This could quickly get complicated as one funciton calls another function, which calls several other funcitons. Thus, the computer uses a stack of functions to know which function to return to once one call finishes.
+This could quickly get complicated as one function calls another function, which calls several other functions. Thus, the computer uses a stack of functions to know which function to return to once one call finishes.
 
-The stack also keeps track of where in the previous funciton we were at and the memory we were using.
+The stack also keeps track of where in the previous function we were at and the memory we were using.
 
 </br>
 
