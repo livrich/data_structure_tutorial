@@ -1,6 +1,6 @@
 # Stack
 
-## What is Stack?
+## What is a Stack?
 A **stack** is a linear data structure that is characterized by the order in which items are added and removed. Typically, stacks take the approach of "last in first out" (**LIFO**).
 
 </br>
