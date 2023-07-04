@@ -3,7 +3,7 @@
 ## What is a Set?
 A **set** is a data structure that stores a collection of unique values in any order. 
 
-It is important to note that, with sets, the order of the data is not important but no duplicate values are allowed. Most set implementations will not give an error when you try to add a duplicate value. This is done so that a list, which may have duplicates, can easily be coverted to a set. 
+It is important to note that, with sets, the order of the data is not important but no duplicate values are allowed. Most set implementations will not give an error when you try to add a duplicate value. This is done so that a list, which may have duplicates, can easily be converted to a set. 
 
 Due to these two key characteristics, a technique called **hashing** is used to add, remove, and check for a value in O(1) time.
 
@@ -12,7 +12,7 @@ Due to these two key characteristics, a technique called **hashing** is used to 
 ## Hashing
 Hashing is designed to solve the problem of needing to efficiently find or store an item in a collection.
 
-For example, is we have a list of 10,000 numbers and we want to check if a given number is in the list, it would be inefficient to successively compare the word with all 10,000 items until we find a match. This wold be O(n) efficiency, which isn't terrible, but not great for large data sets.
+For example, is we have a list of 10,000 numbers and we want to check if a given number is in the list, it would be inefficient to successively compare the word with all 10,000 items until we find a match. This would be O(n) efficiency, which isn't terrible, but not great for large data sets.
 
 This is why hashing is useful. It is a way to narrow down our search; typically, by generating an index at which the value we are looking for is stored.
 
@@ -24,7 +24,7 @@ However, what if we need to store larger numbers, such as numbers 0-999,999,999?
 
 ![10 digit set](set_10digit.jpeg)
 
-The equation **index(n) = n % 10** can further be generatlized into **index(n) = hash(n) % sparse_list_size**. This function can be used for integers, floats, and strings. The hash(n) represents what is called a **hashing function**. The hashing function will conver non-integers into integers so that the modulo operation can be performed. Though, not everything can be hashed. For example, a list in Python cannot be hashed.
+The equation **index(n) = n % 10** can further be generalized into **index(n) = hash(n) % sparse_list_size**. This function can be used for integers, floats, and strings. The hash(n) represents what is called a **hashing function**. The hashing function will convert non-integers into integers so that the modulo operation can be performed. Though, not everything can be hashed. For example, a list in Python cannot be hashed.
 
 Hashing is a great tool to improve performance, but what happens if we try to add multiple values to the same index? This is called a conflict.
 
@@ -50,14 +50,14 @@ The second option is called **chaining**. Instead of looking for an empty index 
 ### Adverse Effects
 Besides the previously mentioned downside to open addressing, both options poorly affect performance. The use of the hashing function is what gives us O(1) timing. If we have to search through several positions or a chained list to find a value, we will have O(n) performance if the amount of conflict is high.
 
-To avoid this, we need to increase the size of the sparsed list if the amount of conflict is too high. If we take this action, we also need to reposition all of the values by running the index(n) function again with the increased sparsed list size.
+To avoid this, we need to increase the size of the sparse list if the amount of conflict is too high. If we take this action, we also need to reposition all of the values by running the index(n) function again with the increased sparse list size.
 
 </br>
 
 ## Some Uses
 There are many uses for a set. The three most common uses are:
 * Find unique values in a list
-* Allow quick access to previusly calculated results
+* Allow quick access to previously calculated results
 * Perform mathematical operations such as an **intersection** (common values between two sets) and a **union** (all values within two sets)
 
 In Python, a set can be represented using curly braces: **my_set = {1, 2, 3}** To create an empty set, we use: **empty_set = set()** To determine membership in a set: the **in** operator is used.
@@ -67,7 +67,7 @@ The Python library also includes a class called **dict**, which stands for dicti
 </br>
 
 ## Big O Notation
-The performance of the set is based on the peformance of the hashing algorithm and the assumption that good conflict resolution is being applied.
+The performance of the set is based on the performance of the hashing algorithm and the assumption that good conflict resolution is being applied.
 Common Operation | Python Code | Performance
 ---------------- | ----------- | -----------
 add(value) | my_set.add(value) | O(1) - Performance of hashing the value
