@@ -79,7 +79,7 @@ size() | length = len(my_set) | O(1) - Performance of returning the size of the 
 
 ## Code Example
 ### Maximum and Minimum
-Given a set, find the maximum and minimum values.
+Given a set, find the maximum and minimum values. \
 &nbsp;&nbsp;&nbsp;&nbsp;`Input: set = ([8, 16, 24, 1, 25, 3, 10, 65, 55])` \
 &nbsp;&nbsp;&nbsp;&nbsp;`Output: max is 65, min is 1`
 
