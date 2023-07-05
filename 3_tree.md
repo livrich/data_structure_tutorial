@@ -40,7 +40,7 @@ When an imbalance is detected, a node rotation is performed to make the BST bala
 ## Basic Operations
 ### Inserting
 Inserting into a BST is a recursive operation:
-* Base Case - If there is space to add the node (subtree is empty), then the correct place has been foudn and the item can be inserted.
+* Base Case - If there is space to add the node (subtree is empty), then the correct place has been found and the item can be inserted.
 * Smaller Problem - Insert a value into either the left subtree or the right subtree based on the value.
 
 Example:
@@ -136,7 +136,7 @@ def _traverse_forward(self, node):
 		yield node.data
 		yield from self._traverse_forward(node.right)
 ```
-Note: A reverse traversal is frequently assoiated with the **\__reversed__** function in Python.
+Note: A reverse traversal is frequently associated with the **\__reversed__** function in Python.
 
 </br>
 
@@ -160,7 +160,7 @@ Note: Python does not have a built-in BST class. There are packages that can be 
 
 ## Code Example
 ### Matching Elements
-Given two binary search trees consisting of unique positive elements, check whether the two BSTs conatin the same set of elements or not.
+Given two binary search trees consisting of unique positive elements, check whether the two BSTs contain the same set of elements or not.
 
 &nbsp;&nbsp;&nbsp;&nbsp;`Input: `
 
@@ -168,7 +168,7 @@ Given two binary search trees consisting of unique positive elements, check whet
 
 &nbsp;&nbsp;&nbsp;&nbsp;`Output: Yes, they contain the same elements`
 
-Method: A property of BSTs is that inorder traversal of a BST generates a sorted array. Thus, we can do inorder traversal of both the BSTs and generate two arrays and finally, we can compare these two arrays. If both of the arrays are the same, then the BSTs are have the same elements. Otherwise, the elements of the two BSTs are different.
+Method: A property of BSTs is that in order traversal of a BST generates a sorted array. Thus, we can do in order traversal of both the BSTs and generate two arrays and finally, we can compare these two arrays. If both arrays are the same, then the BSTs have the same elements. Otherwise, the elements of the two BSTs are different.
 
 ```python
 # Program to check if two BSTs contains
