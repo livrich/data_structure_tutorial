@@ -153,6 +153,7 @@ traverse_reverse | Visit all objects from largest to smallest. | O(n) - Recursiv
 height(node) | Determine the height of a node. If the height of the tree is needed, the root node is provided. | O(n) - Recursively find the height of the left and right subtrees and then return the maximum height (plus one to account for the root).
 size() | Return the size of the BST. | O(1) - The size is maintained within the BST class.
 empty() | Returns true if the root node is empty. This can also be done by checking the size for 0. | O(1) - The comparison of the root node or the size.
+
 Note: Python does not have a built-in BST class. There are packages that can be installed that provide implementations for a BST. Many people create their own BST class in Python. Thus, if you make your own class, be sure that your performance matches what is expected.
 
 </br>
