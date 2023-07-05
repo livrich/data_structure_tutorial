@@ -141,7 +141,7 @@ Note: A reverse traversal is frequently assoiated with the **\__reversed__** fun
 </br>
 
 ## Big O Notation
-Note: This information is under the assumption you are using a balance BST. If your BST is not balanced, it is highly likely your performance will be worse than what this table states.
+Note: This information is under the assumption you are using a balance BST. If your BST is not balanced, it is highly likely your performance will be worse than what this table states. \
 Common BST functions:
 Operation | Description | Performance
 --------- | ----------- | -----------
