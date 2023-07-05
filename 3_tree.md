@@ -165,6 +165,7 @@ Given two binary search trees consisting of unique positive elements, check whet
 &nbsp;&nbsp;&nbsp;&nbsp;`Input: `
 
 ![input bst](example_prob_bst.png)
+
 &nbsp;&nbsp;&nbsp;&nbsp;`Output: Yes, they contain the same elements`
 
 Method: A property of BSTs is that inorder traversal of a BST generates a sorted array. Thus, we can do inorder traversal of both the BSTs and generate two arrays and finally, we can compare these two arrays. If both of the arrays are the same, then the BSTs are have the same elements. Otherwise, the elements of the two BSTs are different.
